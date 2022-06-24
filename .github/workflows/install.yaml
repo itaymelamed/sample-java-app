@@ -26,8 +26,6 @@ jobs:
                 "snapshots": {
                   "enabled": "true"
                 }
-                "servers":
-
               }
             ]
       - uses: actions/checkout@v3
