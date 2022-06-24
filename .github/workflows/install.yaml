@@ -7,6 +7,19 @@ jobs:
   publish:
     runs-on: ubuntu-latest 
     steps:
+      - name: Generate settings.xml for Maven Builds
+        uses: whelk-io/maven-settings-xml-action@v20
+        with:
+          repositories: |
+            [
+              {
+                "id": "github",
+                "url": "https://maven.pkg.github.com/itaymelamed/simple-java-maven-app",
+                "snapshots": {
+                  "enabled": "true"
+                }
+              }
+            ]
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
