@@ -24,6 +24,8 @@ jobs:
                 "id": "github",
                 "url": "https://maven.pkg.github.com/itaymelamed/simple-java-maven-app",
                 "snapshots": {
+                }
+                "releases": {
                   "enabled": "true"
                 }
               }
@@ -34,6 +36,7 @@ jobs:
           java-version: "11"
           distribution: "adopt"
       - name: Intsall
-        run: mvn install
+        run: mvn install -s /home/runner/.m2/settings.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER_NAME: "itaymelamed"
