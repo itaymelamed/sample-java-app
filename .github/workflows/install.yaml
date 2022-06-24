@@ -37,7 +37,7 @@ jobs:
           java-version: "11"
           distribution: "adopt"
       - name: Intsall
-        run: mvn -B package -s /home/runner/.m2/settings.xml --file pox.xml
+        run: mvn -B package -s /home/runner/.m2/settings.xml --file pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USER_NAME: "itaymelamed"
