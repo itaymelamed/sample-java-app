@@ -10,6 +10,8 @@ jobs:
       - name: Generate settings.xml for Maven Builds
         uses: whelk-io/maven-settings-xml-action@v20
         with:
+          servers: |
+            '[{"id": "github", "username": "itaymelamed", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
           repositories: |
             [
               {
@@ -18,6 +20,8 @@ jobs:
                 "snapshots": {
                   "enabled": "true"
                 }
+                "servers":
+
               }
             ]
       - uses: actions/checkout@v3
