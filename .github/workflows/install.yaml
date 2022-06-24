@@ -24,7 +24,8 @@ jobs:
                 "id": "github",
                 "url": "https://maven.pkg.github.com/itaymelamed/simple-java-maven-app",
                 "snapshots": {
-                }
+                  "enabled": "true"
+                },
                 "releases": {
                   "enabled": "true"
                 }
